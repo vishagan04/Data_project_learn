@@ -1,0 +1,17 @@
+{
+	"name": "Order_details_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "raw",
+			"table": "order_details"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

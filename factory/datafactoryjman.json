@@ -1,0 +1,9 @@
+{
+	"name": "datafactoryjman",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8ff902b1-6aea-40be-8d8c-c8508a7bc335",
+		"tenantId": "2800c0a0-70e9-49be-8733-faeaa6aced99"
+	}
+}
