@@ -67,7 +67,7 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> source2",
-				"source1, source2 join(source1@CustomerID == source1@CustomerID,",
+				"source1, source2 join(source1@CustomerID == source2@CustomerID,",
 				"     joinType:'left',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
