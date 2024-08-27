@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "updated_price",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_REST_SRC_SYSTEM_BASIC",
