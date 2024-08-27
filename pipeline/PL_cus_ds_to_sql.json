@@ -51,7 +51,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "DB_customer",
 						"type": "DatasetReference"
 					}
 				]
