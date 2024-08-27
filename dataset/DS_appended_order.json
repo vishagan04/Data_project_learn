@@ -1,5 +1,5 @@
 {
-	"name": "DS_appended_customer",
+	"name": "DS_appended_order",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_REST_SRC_SYSTEM_BASIC",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "customer.csv",
+				"fileName": "order.csv",
 				"container": "consolidated"
 			},
 			"columnDelimiter": ",",

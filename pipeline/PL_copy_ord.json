@@ -1,5 +1,5 @@
 {
-	"name": "PL_copy_cus",
+	"name": "PL_copy_ord",
 	"properties": {
 		"activities": [
 			{
@@ -16,15 +16,12 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
+						"type": "ExcelSource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFileName": "*.csv",
+							"wildcardFileName": "*.xlsx",
 							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -51,13 +48,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_SRC_CUS_ORD_CSV",
+						"referenceName": "DS_SRC_CLIENT_ORDER_EXCEL",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_appended_customer",
+						"referenceName": "DS_appended_order",
 						"type": "DatasetReference"
 					}
 				]
