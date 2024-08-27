@@ -11,6 +11,9 @@
 		"LS_REST_SRC_SYSTEM_BASIC_connectionString": {
 			"value": ""
 		},
+		"LS_sql_database_password": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "ss-client-order.database.windows.net"
 		},
@@ -18,6 +21,15 @@
 			"value": "DB_client_order"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "vishagan"
+		},
+		"LS_sql_database_properties_typeProperties_server": {
+			"value": "ss-client-order.database.windows.net"
+		},
+		"LS_sql_database_properties_typeProperties_database": {
+			"value": "DB_client_order"
+		},
+		"LS_sql_database_properties_typeProperties_userName": {
 			"value": "vishagan"
 		}
 	}
