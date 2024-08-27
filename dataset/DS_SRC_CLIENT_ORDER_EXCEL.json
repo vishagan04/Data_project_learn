@@ -1,5 +1,5 @@
 {
-	"name": "Excel1",
+	"name": "DS_SRC_CLIENT_ORDER_EXCEL",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_REST_SRC_SYSTEM_BASIC",

@@ -48,7 +48,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Excel1",
+						"referenceName": "DS_SRC_CLIENT_ORDER_EXCEL",
 						"type": "DatasetReference"
 					}
 				],
