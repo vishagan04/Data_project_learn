@@ -1,5 +1,5 @@
 {
-	"name": "RAW_DB_customer",
+	"name": "RAW_DB_order",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_sql_database",
@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "RAW",
-			"table": "cus_details"
+			"table": "ord_details"
 		}
 	}
 }
