@@ -171,7 +171,7 @@
 					"sinks": [
 						{
 							"dataset": {
-								"referenceName": "DelimitedText1",
+								"referenceName": "updated_price",
 								"type": "DatasetReference"
 							},
 							"name": "sink1",
