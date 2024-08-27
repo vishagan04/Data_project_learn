@@ -1,0 +1,16 @@
+{
+	"name": "reporting_cus_ord_details",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_sql_database",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "reporting",
+			"table": "cus_ord_details"
+		}
+	}
+}

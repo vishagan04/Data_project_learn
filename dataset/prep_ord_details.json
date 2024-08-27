@@ -1,0 +1,16 @@
+{
+	"name": "prep_ord_details",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_sql_database",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "Prep",
+			"table": "ord_details"
+		}
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"name": "DF_Cleaned_Customer",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "RAW_DB_customer",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "prep_cus_details",
+						"type": "DatasetReference"
+					},
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "LS_REST_SRC_SYSTEM_BASIC",
+						"type": "LinkedServiceReference"
+					}
+				}
+			],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          CustomerID as string,",
+				"          FirstName as string,",
+				"          LastName as string,",
+				"          Email as string,",
+				"          PhoneNumber as string,",
+				"          Address as string,",
+				"          City as string,",
+				"          State as string,",
+				"          ZipCode as string,",
+				"          Country as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> source1",
+				"source1 derive(LastName = iif(LastName==\"NULL\" || LastName == \"\" , toString(null()),LastName),",
+				"          Email = iif(Email==\"NULL\" || Email==\"\" , toString(null()),Email),",
+				"          PhoneNumber = iif(PhoneNumber==\"NULL\"|| PhoneNumber==\"\" , toString(null()),PhoneNumber),",
+				"          Address = iif(Address==\"NULL\" || Address==\"\" , toString(null()),Address),",
+				"          City = iif(City==\"NULL\"||City==\"\"  , toString(null()),City),",
+				"          State = iif(State==\"NULL\"||State==\"\" , toString(null()),State),",
+				"          ZipCode = iif(ZipCode==\"NULL\" ||ZipCode==\"\" , toString(null()),ZipCode),",
+				"          Country = iif(Country==\"NULL\"||Country==\"\" , toString(null()),Country)) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     recreate:true,",
+				"     format: 'table',",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     saveOrder: 1,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
+			]
+		}
+	}
+}
